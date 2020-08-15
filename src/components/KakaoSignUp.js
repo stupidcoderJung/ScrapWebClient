@@ -8,7 +8,7 @@ class KakaoSignUp extends React.Component {
     this.state = {
       data: "kakao",
       id: "",
-      name: "",
+      email: "",
       provider: "",
     };
   }
@@ -16,8 +16,9 @@ class KakaoSignUp extends React.Component {
   responseKaKao = (res) => {
     this.setState({
       data: res,
+      email: res.profile,
     });
-    console.log(JSON.stringify(this.state.data));
+    console.log(JSON.stringify(this.state.email));
     alert(JSON.stringify(this.state.data));
   };
 
